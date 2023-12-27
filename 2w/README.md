@@ -31,6 +31,24 @@ ex) C/C++, Java, Python 등
 
 > 파이썬(Python)
 
+문법이 쉽고 함수가 다양함
+
+대화식 객체지향 언어(interactive object oriented language)
+
+자체 IDE로 IDLE를 제공한다
+
+> Script
+
+1 Line으로 코드를 작성할 수 있는 실행기
+
+해당 라인을 Shell prompt라고 한다
+
+> IDE
+
+Integrated development environment
+
+통합 개발 환경으로 편집기, 실행기, 콘솔 등 다양한 개발 도구의 모임
+
 
 
 
