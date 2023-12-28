@@ -84,7 +84,7 @@ print 구문 내에 (,)를 통해 구분하여 변수를 삽입할 수 있음
 
 d는 10진수(decimal number)의 약자 (%i는 integer의 약자)
 
-o(octimal), x(heximal) 등의 변형이 있음
+o(octal), x(hexa) 등의 변형이 있음
 
 %.1f와 같이 소숫점 1자리까지 표시하고 반올림하는 지정자도 있음
 
