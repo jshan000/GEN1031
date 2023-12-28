@@ -69,7 +69,7 @@ input 함수 내에도 출력문을 넣을 수 있음
 ```
 # 고객 정보 출력
 print('\n고객님은 ', addr, '에 거주하는', ages, '대', gender, '성입니다.')
-print('보유 제품은 %d  년에 구입한 %s 제품입니다.' %(year, manuf))
+print('보유 제품은 %d 년에 구입한 %s 제품입니다.' %(year, manuf))
 print('희망제품은 %s 색상에 %.1f 인치입니다.' %(color, size))
 
 #맺음말
