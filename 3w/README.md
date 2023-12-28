@@ -87,3 +87,9 @@ d는 10진수(decimal number)의 약자 (%i는 integer의 약자)
 o(octimal), x(heximal) 등의 변형이 있음
 
 %.1f와 같이 소숫점 1자리까지 표시하고 반올림하는 지정자도 있음
+
+print()구문은 사실 많은 인자가 생략되어 있는데, print("", end="\n")이 디폴트
+
+그래서 자동으로 개행되는 것
+
+end=뒤에 어떤 구문을 넣으면 print 구문 뒤에 출력됨
