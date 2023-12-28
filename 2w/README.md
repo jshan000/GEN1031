@@ -97,9 +97,15 @@ Integrated development environment
 
 ### 2주차. 3. 형변환
 
+> 형변환(casting)
 
+주어진 자료형을 다른 자료형으로 변환
 
+int(), float(), str()가 있음
 
+int()의 경우 int('Hi')혹은 int('45.6')은 오류 발생
+
+int('45.6')을 제대로 연산하기 위해서 int(float('45.6'))으로 사용
 
 
 ---
