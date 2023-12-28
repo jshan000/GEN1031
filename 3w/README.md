@@ -35,4 +35,16 @@ print('''안녕하세요? 반갑습니다.
 print()
 print('Q1. 고객님의 나이대는 어떻게 되십니까?')
 ages = int(input())
+print('Q2. 고객님의 성별은 무엇입니까?')
+gender = input()
+print('Q3. 고객님의 주거지는 어디입니까?')
+addr = input()
 ```
+
+해당 소스코드에서 사용된 (#)은 주석
+
+첫 번째 print문의 '''은 멀티 스트링(줄바꿈 포함)을 표현하기 위함
+
+print()구문은 개행을 위해서 사용
+
+input()의 출력형은 str이므로 int로 casting
