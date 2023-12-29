@@ -36,14 +36,18 @@ print('내가 숨은 곳을 찾아봐~')
 print()
 
 burrow = 3
-guess = int(input('두더지가 있는 땅굴번호를 맞춰보세요(1~7): ')
+guess = int(input('두더지가 있는 땅굴번호를 맞춰보세요(1~7): '))
 
 if(burrow == guess):
   print('나를 찾았군! 잘 했다.')
 
 if(burrow != guess):
-  print('아니야. 나는 ' + burrow + '번 땅굴에 있어.')
+  print('아니야. 나는 ' + str(burrow) + '번 땅굴에 있어.')
 ```
+
+int(input())꼴에서 괄호의 갯수를 확인
+
+print 구문 안에서 (+)기호 사용 시 str 끼리만 연산이 됨에 주의
 
 if문 사용 시 콜론(:)을 필수로 사용하고 조건문에 걸리는 문장을 들여쓰기
 
