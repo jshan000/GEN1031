@@ -2,7 +2,13 @@
 
 ## 목차
 
-[1.](#---------)
+[1.](#1주차-1-가위바위보-게임) 가위바위보 게임
+
+  [1.1.](#1-1-소스코드) 소스코드
+
+  [1.2.](#1-2-소스코드-수정) 소스코드 수정
+
+  [1.3.](#1-3-코드-해설) 코드 해설
 
 [2.](#---------)
 
@@ -13,3 +19,150 @@
 
 > 문제 정의
 
+두 사람 이상이 참가하는 게임으로 각 참가자가 가위, 바위, 보 중에 하나를 선택하면 정해진 규칙에 따라 승자를 결정하는 게임
+
+승자를 정하는 규칙
+```
+가위는 보에 이기고, 보는 바위에 이기며, 바위는 가위에 이기고, 같은 것을 선택하면 비긴다.
+```
+
+> 해결 방안
+
+가정: 참가자는 컴퓨터와 사용자
+
+입력: 컴퓨터는 가위/바위/보 중 하나를 무작위로 자동 선택, 사용자는 키보드로 입력
+
+처리: 사용자가 입력한 값과 컴퓨터가 선택한 값을 비교하여 정해진 규칙에 따라 승자를 결정
+
+출력: 결정된 승자에 따라 메세지를 출력
+
+#### 1. 1. 소스코드
+
+```
+import random
+print('신나는 가위~', '바위~', '보~!!!!! 게임')
+
+# 사용자와 컴퓨터의 선택 값 결정
+print('-' * 50)
+yourHand = input('가위~ 바위~ 보! 중에 하나를 골라주세요~    ')
+comRandom = random.randint(1,3)
+
+if comRandom == 1:
+    comHand = '가위'
+elif comRandom == 2:
+    comHand = '바위'
+else:
+    comHand = '보'
+
+# 승자결정
+if comHand == '가위':
+    if yourHand == '가위':
+        winner = '비김'
+    elif yourHand == '바위':
+        winner = '당신'
+    else:
+        winner = '컴퓨터'
+elif comHand == '바위':
+    if yourHand == '가위':
+        winner = '컴퓨터'
+    elif yourHand == '바위':
+        winner = '비김'
+    else:
+        winner = '당신'
+else:
+    if yourHand == '가위':
+        winner = '당신'
+    elif yourHand == '바위':
+        winner = '컴퓨터'
+    else:
+        winner = '비김'
+
+# 승부 결과출력
+if winner == '당신':
+    print('당신 이김! 컴퓨터 짐! (You:', yourHand, ', Com:', comHand, ')')
+elif winner == '컴퓨터':
+    print('당신 짐! 컴퓨터 이김! (You:', yourHand, ', Com:', comHand, ')')
+else:
+    print('무승부! (You:', yourHand, ', Com:', comHand, ')')
+
+print('-' * 50)
+```
+
+random 모듈은 randint와 같은 무작위 값을 불러오는 함수가 들어있는 모듈
+
+#### 1. 2. 소스코드 수정
+
+위와 같이 프로그래밍하면 '보' 대신 무엇을 넣더라도 오류가 발생하지 않고 '보'라고 인식
+
+오류처리를 통해서 구현하고, 원하는 입력의 예시를 넣어 오류를 줄이자
+
+```
+import random
+print('신나는 가위~', '바위~', '보~!!!!! 게임')
+
+# 사용자와 컴퓨터의 선택 값 결정
+print('-' * 50)
+yourHand = input('가위~ 바위~ 보! 중에 하나를 골라주세요~    ')
+comRandom = random.randint(1,3)
+
+if comRandom == 1:
+    comHand = '가위'
+elif comRandom == 2:
+    comHand = '바위'
+else:
+    comHand = '보'
+
+# 승자결정
+if yourHand == '가위':
+    if comHand == '가위':
+        winner = '비김'
+    elif comHand == '바위':
+        winner = '당신'
+    else:
+        winner = '컴퓨터'
+elif yourHand == '바위':
+    if comHand == '가위':
+        winner = '컴퓨터'
+    elif comHand == '바위':
+        winner = '비김'
+    else:
+        winner = '당신'
+elif yourHand == '보':
+    if comHand == '가위':
+        winner = '당신'
+    elif comHand == '바위':
+        winner = '컴퓨터'
+    else:
+        winner = '비김'
+else:
+    print('지원하지 않는 입력입니다. "가위", "바위", "보" 중에 하나를 입력해 주세요.')
+    winner = '없음'
+
+# 승부 결과출력
+if winner == '당신':
+    print('당신 이김! 컴퓨터 짐! (You:', yourHand, ', Com:', comHand, ')')
+elif winner == '컴퓨터':
+    print('당신 짐! 컴퓨터 이김! (You:', yourHand, ', Com:', comHand, ')')
+elif winner == '비김':
+    print('무승부! (You:', yourHand, ', Com:', comHand, ')')
+
+print('-' * 50)
+```
+
+승부 결과를 구하는 과정에서 if 문의 조건문을 comHand에서 yourHand로 전환
+
+입력값이 다를 때를 else로 처리하여 오류를 처리
+
+winner를 없음으로 설정하여 결과 출력에서 통과
+
+#### 1. 3. 코드 해설
+
+> 모듈
+
+```
+import random
+```
+
+randint() 함수와 같은 무작위 인자를 뽑아내는 함수들이 있는 모듈
+
+해당 모듈을 사용하기 위해서는 import를 통해 random.py 라는 모듈을 내 코드에 입력해야 함
