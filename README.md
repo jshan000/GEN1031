@@ -10,6 +10,8 @@
 > 
 > 수업 시작일 2023. 12. 26.
 > 
-> 중간고사 2024. 01. 05., 기말고사 2024. 01. 16.
+> 중간고사 2024. 01. 05. 13:00 ~ 14:00 -> 제 2공학관 402호
+>
+> 기말고사 2024. 01. 16.
 > 
 > 코랩 주소 [코랩](https://colab.research.google.com/drive/1ZliO2gSZOLuFN0F6QSq9tgI5oGrJklGr#scrollTo=7eEHkkcJbCQP)
