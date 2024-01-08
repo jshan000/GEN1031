@@ -25,6 +25,6 @@
 > > while문과 배운 문법만 작성 (for문과 기타 연산자 x)
 > 
 >
-> 기말고사 2024. 01. 16.
+> 기말고사 2024. 01. 16. 13:00 ~ 14:00 -> 제 2공학관 402호
 > 
 > 코랩 주소 [코랩](https://colab.research.google.com/drive/1ZliO2gSZOLuFN0F6QSq9tgI5oGrJklGr#scrollTo=7eEHkkcJbCQP)
